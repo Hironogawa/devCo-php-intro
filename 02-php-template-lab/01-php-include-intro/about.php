@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
-    <title>PHP Intro | Templates</title>
+    <title>PHP Intro | About</title>
   </head>
 
   <body>
     <?php include 'header.php'; ?>
+    <img src="../../assets/media/freepik-13055.jpg" alt="Working Developer Visual">
     <main class="section-main">
       <?php echo '<h1 class="main-title">About PHP</h1>' ?>
       <p>

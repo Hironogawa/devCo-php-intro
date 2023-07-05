@@ -1,4 +1,5 @@
 <?php include 'block/htmlHead.php'; ?>
+<img src="../../assets/media/freepik-13055.jpg" alt="Working Developer Visual">
   <main class="section-main">
     <h1 class="main-title">About PHP</h1>
     <p>
