@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>PHP Intro | Templates</title>
   </head>
 
   <body>
-    <?php include './nav/headerMain.php'; ?>
+    <?php include 'header.php'; ?>
     <main class="section-main">
       <?php echo '<h1 class="main-title">About PHP</h1>' ?>
       <p>
@@ -28,7 +28,7 @@
         With its widespread usage and mature ecosystem, PHP remains a popular choice for web development, powering countless websites and web applications. Its flexibility, versatility, and large developer community contribute to its ongoing relevance and continued growth in the industry.
       </p>
     </main>
-    <?php include './nav/footerMain.php'; ?>
+   <?php include 'footer.php'; ?>
 
   </body>
 </html>

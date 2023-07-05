@@ -5,7 +5,7 @@
 Check which PHP version or if PHP is installed on you Linux computer:
 
 1. Open your command line interface / Terminal
-2. Type: PHP --version
+2. Type: php -v
 3. Hit enter and Check the output.
 
 # Install PHP on Linux (Ubuntu)
