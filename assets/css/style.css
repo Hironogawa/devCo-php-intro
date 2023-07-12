@@ -62,16 +62,18 @@ body {
 }
 
 .footer-main {
-  width: 100%;
+  width: auto;
 
   margin-top: auto;
-  padding: 42px 20%;
+  padding: 42px 60px;
 
   color: whitesmoke;
   background-color: darkslateblue;
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 48px;
 }
 

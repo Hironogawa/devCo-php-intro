@@ -24,7 +24,7 @@
       '<h1>I will not display without echo!</h1>';
 
     ?>
-    <!-- We can write regular HTML in our PHP files -->
+    <!-- We can write regular HTML in our PHP files (atleast outside of the PHP tags -->
     <p>This text is saved in a PHP variable</p>
 
     <?php echo '<p>Another line of text' ?>

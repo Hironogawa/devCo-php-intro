@@ -24,11 +24,19 @@
     $headline = "This site is build with PHP, we use it to parse the HTML input values to our backend and process for new conent.";
     $body = "We learn how to pass the content to our server and display it in the browser, later we maybe use the session storage to pressist the data.";
 
+
+    /*
+      We import here the functioon from pageIntro and pass the PHP varibles as arguments to our function to build our first page entry here.
+    */
     require "block/pageIntro.php";
 
     displayIntro($title, $headline, $body);
 
   ?>
+
+<!--
+  We can send with a regular HTML Form data to our PHP backend. 
+-->
   <form action="result.php" method="post">
     <label for="vorname">Vorname: </label>
     <input type="text" name="vorname">

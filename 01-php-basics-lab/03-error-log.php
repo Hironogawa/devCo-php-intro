@@ -9,17 +9,22 @@
 
   <body>
     <?php
+      /*
+        Ths line below will trow an error, do you know why? Read the error in your broweser or log.
+      */
       echo '<h1>My first PHP error';
     ?>
-    <?php
 
+    <?php
+        /*
+          We can generate custom errors, for that PHP provides the error_log() function.
+        */
         $varialeX = 'Neuer Text';
 
         echo 'I am an error';
         error_log($varialeX);
 
         $varialeX .= ', zweiter Teil.';
-        
         
         error_log($varialeX);
     ?>

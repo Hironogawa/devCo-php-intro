@@ -24,11 +24,13 @@
         $startTag = '<p>';
         $endTag = '</p>';
 
+        /*
+          Like for example JavaScript we can concatinate strings to create dynamic text.
+          In PHP we use the dot symbol to chain our word fragments together.
+        */
         echo '<h2>'.$myVariable.'</h2>';
 
-        echo $startTag . $myVariable  . " " .  $midFrag  . " " .  $lastFrag . $endTag
-
-        
+        echo $startTag . $myVariable  . " " .  $midFrag  . " " .  $lastFrag . $endTag;
     ?>
 
   </body>

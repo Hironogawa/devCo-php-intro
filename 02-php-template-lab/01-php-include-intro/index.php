@@ -10,6 +10,12 @@
   </head>
 
   <body>
+
+    <!--
+        
+      We can create templates to reuse them with include or require in our code.
+    
+    -->
     <?php include 'header.php'; ?>
     <main class="section-main">
       <h1 class="main-title">This is site is build with templates</h1>

@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <?php
-        echo '<h1>Welcome to your first PHP site</h1>';  
+  <h1>Intro to PHP functions</h1>
 
+    <?php
         /*
           PHP functions
           We start a function in PHP with "function" followed by the function name.
@@ -21,25 +21,51 @@
             
         }
 
+
+        //PHP variable
+        $myWord = "<b>Opportunity</b>"; 
+
+        // function call 
+        meineFunktion($myWord);
+
+
+
+        
         function addOne($number) {
+          // This function displays the given number plus one.
           echo $number + 1;
         }
 
-        function multiply($number) {
+        function addOneReturn($number){
+          /* 
+            This function returns the given number, incremented by one.
+            Good for saving it in a variable or work with the returned value.
+          */
+          return $number + 1;
+
+        }
+
+        function multiplyByHundred($number) {
+          // Multiplies the number by 100 and display the value in the broweser.
           echo 100 * $number;
         }
-        multiply(3);
+
+        echo '<p>Output of the multiplyByHundred function: ';
+        multiplyByHundred(3);
 
         echo "<br>";
-        function countDouble($num) {
+
+
+        function countUpDouble($num) {
+          // increment the given number by to and returns it
           return $num + 2;
         }
       
-        $var = countDouble(2);
-        
-
+        $var = countUpDouble(2);
         echo "My new Number is: $var";
         echo "<br>";
+
+
         function countOneUp($num) {
           // ein for loop
           for($i=0; $i <= 10; $i++) {
@@ -56,24 +82,7 @@
         }
         
         countOneUp(1);
-        echo '<br>';
-        countOneUp(10);
-
-
-
-
-
-
-        /* PHP variable */
-        $argumentVariable = 30; 
-        $varZwei = "<b>Another Text</b>"; 
-
-        
-        meineFunktion('Neuer Text');
-
- 
-        
-        
+        echo '<br>';     
     
     ?>
 
