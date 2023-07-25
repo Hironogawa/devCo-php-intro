@@ -9,6 +9,7 @@
 
 <body>
   <?php
+    // To create an array we use the array() function in PHP.
     $variables = array("This", "is", "an", "array.");
 
     $emptyString = '';
@@ -16,7 +17,8 @@
     /*
       foreach loop
 
-      With can go trough an array with a foreach loop and get the value passed by the current loop.
+      With can go trough an array with a loop (foreach loop in this example)
+      and pass the value from current loop to a variable.
 
     */
     foreach($variables as $value) {
@@ -39,7 +41,7 @@
     }
 
 
-    echo '<br>';
+    echo '<br><br>';
 
 
     /*
@@ -49,7 +51,7 @@
     $x = 1;
 
     while($x <= 5) {
-      echo "The number is: $x <br>";
+      echo "The current number is: $x <br><br>";
       $x++;
     }
   ?>

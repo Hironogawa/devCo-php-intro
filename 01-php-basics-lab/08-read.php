@@ -22,7 +22,7 @@
           /*
             The we can read the file with fread().
             The first argument is the file we opened and the second argument defines how many bytes it should read.
-            With the filesize() function we can get the full count of bytes of a file.
+            We can get the full byte count of the file wih the filesize() function.
           */
           echo  "<pre>" . fread($readFile, filesize("writtenByPhp.txt")) . "</pre>";
 

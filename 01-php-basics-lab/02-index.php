@@ -16,15 +16,15 @@
       /*
         echo is like document.write() in JavaScript.
       */
-      echo '<h1>Welcome to your first PHP site</h1>'; // PHP needs a semicolon on every script end or it will trow an error.
+      echo '<h1>Welcome to your first PHP site</h1>'; // PHP needs a semicolon on every script end or it will throw an error.
 
       /*
-        Without echo, nothing will displayed and PHP will trow an error.
+        Without echo, nothing will be displayed in the browser and PHP will throw an error.
       */
       '<h1>I will not display without echo!</h1>';
 
     ?>
-    <!-- We can write regular HTML in our PHP files (atleast outside of the PHP tags -->
+    <!-- We can write regular HTML in our PHP files (outside of the PHP tags-->
     <p>This text is saved in a PHP variable</p>
 
     <?php echo '<p>Another line of text' ?>

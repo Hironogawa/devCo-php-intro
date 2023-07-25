@@ -12,12 +12,13 @@
         <?php
           /*
             With PHP we can also manipulate files on our "server". In this example we write text to a file.
-          */
 
-          /*
-            To write to a file we first need to open it with fopen().
-            We provide the filename to write to as the first argument and the mode as a second argument.
-            "a" stands for append
+
+            To write to a file, we need to open it first with the fopen() function.
+     
+            The fopen() function needs two arguments:
+            1. The file to open
+            2. The mode to open the file in ("a" stands for append)
 
             There is:
             "r" - Read only. Starts at the beginning of the file
@@ -25,14 +26,24 @@
             "a" - Write only. Opens and writes to the end of the file or creates a new file if it doesn't exist
 
             You can finde more modes here on W3Schools: https://www.w3schools.com/php/func_filesystem_fopen.asp
-         
-  
+           
             The or die here is to prevent misbehaving if an error occurs.
+
           */
           $writeFile = fopen("writtenByPhp.txt", "a") or die("Unable to open file!");
 
           // Here we store the text to a variable and pass it as an argument to the fwrite function to write it to the file
           $txt = "My First Line\n";
+          /*
+
+          Than we can use the fwrite() function to write to the file.
+
+          The fwrite() function needs two arguments:
+          1. The file to write to
+          2. The text to write to the file
+          
+          */
+
           fwrite($writeFile, $txt);
 
           // Here we append another line to our file
@@ -44,7 +55,7 @@
 
         ?>
 
-        <?php echo '<p>PHP wrote a new file for you, take a look inside your current folder.</p>'; ?>
+        <?php echo "<p>PHP wrote a new file for you, take a look inside your current folder.</p>"; ?>
 </body>
 
 </html>

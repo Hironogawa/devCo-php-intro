@@ -10,23 +10,23 @@
   <body>
     <?php
       /*
-        Ths line below will trow an error, do you know why? Read the error in your broweser or log.
+        Ths line below will throw an error, do you know why? Read the error in your broweser or log.
       */
-      echo '<h1>My first PHP error';
+      echo '<h1>My first PHP error' . '</h1>';
     ?>
 
     <?php
         /*
           We can generate custom errors, for that PHP provides the error_log() function.
         */
-        $varialeX = 'Neuer Text';
+        $d = "\n \n ----------------- My Error Log ----------------- \n \n";
 
-        echo 'I am an error';
-        error_log($varialeX);
+        // We can pass a string to the error_log() function.
+        $varialeX = 'This is my first error log.';
+        error_log($d.$varialeX.$d);
 
-        $varialeX .= ', zweiter Teil.';
-        
-        error_log($varialeX);
+        $varialeX .= 'Another custom error log.';
+        error_log($d.$varialeX.$d);
     ?>
 
   </body>
