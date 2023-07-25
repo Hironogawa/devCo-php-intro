@@ -14,20 +14,35 @@
 <main class="container py-5">
 <?php
     session_start();
-   
-    if(isset($_SESSION['username']) && isset($_POST['username'])) {
-      $userData = array('user' => strval($_POST['username']), 'last_login' => strval(date("l jS \of F Y h:i:s A")));
-      array_push($_SESSION['username'], $userData);
-    } elseif (isset($_POST['username'])) {
-      $_SESSION['username'] = array();
-      $userData = array('user' => strval($_POST['username']), 'last_login' => strval(date("l jS \of F Y h:i:s A")));
-      array_push($_SESSION['username'], $userData);
+    
+    require "block/globals.php";
+    $textFields = constant('FORM_FIELDS');
 
-      foreach($_SESSION['username'] as $value) {
-        print_r($value);
+    // Get the last key from the array "FORM_FIELDS"
+    $last_key = array_key_last($textFields);
+
+    // We use this to determine if there is an error
+    $error = false;
+    foreach($textFields as $key => $value) {
+      
+      if(!empty($_POST[$value['name']])) {
+        // We store the value from the input field in the session variable
+        $_SESSION[$value['name']] = $_POST[$value['name']]; 
+      } else {
+        // We display an error message if a field is empty
+        echo '<div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Fehlendes Feld!</h4>
+                <p>Bitte das Feld '.$value['title'].' aus.</p>
+              </div>';
+        // if a field is empty we set the error variable to true
+        $error = true;
       }
+      if($last_key == $key && !$error) {
+        header("Location: about.php");
+      }
+
     }
-    print_r($_SESSION['username']);
+
 ?>
 </main>
 </body>

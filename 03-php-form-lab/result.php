@@ -21,8 +21,8 @@
     $headline = "Nice to meet you, we haven't stored you data.";
     $body = "The data is temporarly stored and will be deleted if you close the window.";
 
+    // We include our pageIntro function from the block folder
     require "block/pageIntro.php";
-
     displayIntro($title, $headline, $body);
 
   ?>

@@ -14,22 +14,21 @@
 
 <?php include 'block/nav.php' ?>
 <main class="container py-5">
-  <h1>Get the values from the PHP Session</h1>
-  <p>On this site we concatinate the variables and generate a dynamic Text form the input on the start page.</p>
-
-
+  <h1>Dynamic Text with PHP session</h1>
+  <p>Acces the values from the session storage and display them on the page.</p>
 <?php
+// To access the session variable we need to start the session first.
 session_start();
 
-
-if(isset($_SESSION['vorname'])){
-  echo "<h1>Hallo " . $_SESSION['vorname'] . "</h1>";
+if(isset($_SESSION['first_name'])){
+  echo "<h1>Hallo " . $_SESSION['first_name'] . "</h1>";
 
 } else {
-  echo '<a href="index.php">Bitte gebe deinen Vorname ein</a>';
-}
-if(isset($_SESSION['price'])){
-echo 'Der Preis ist: ' . $_SESSION['price'] . 'CHF';
+  // If the session variable is not set we display an error message.
+  echo '<div class="alert alert-danger" role="alert">
+          <h4 class="alert-heading">Fehlendes Feld!</h4>
+          <p>Bitte fülle das Feld Vorname aus.</p>
+        </div>';
 }
 
 ?>

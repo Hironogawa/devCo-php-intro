@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,27 +13,22 @@
 <body>
 <?php include 'block/nav.php' ?>
 <main class="container py-5">
-<?php
-  $_SESSION['price'] = 30;
-?>
-
 
 
   <div class="container-sm ">
     <form action="result.php" method="post" class="d-flex flex-column gap-3 ">
-          <?php $textFields = array(
-            'username' => array('name' => 'Username', 'type' => 'text'),
-            'first_name' => array('name' => 'Vorname', 'type' => 'text'),
-            'last_name' => array('name' => 'Nachname', 'type' => 'text'),
-            'email' => array('name' => 'E-Mail', 'type' => 'text'),
-            'tel' => array('name' => 'Telefon', 'type' => 'text'),
-          );
+          <?php
+           session_start();
+          
+          // Importing our "constant" array from globals.php
+          require "block/globals.php";
+          $textFields = constant('FORM_FIELDS');
 
-          foreach($textFields as $key => $value) {
+          foreach($textFields as $value) {
           echo '<div class="d-flex row mb-4">
                   <div class="form-group col">
-                    <label for="vorname">' . $value['name']. ': </label>
-                      <input class="form-control mb-2" type="' . $value['type'] . '" name="' . $key . '" >
+                    <label for="'.$value['title'].'">' . $value['title']. ': </label>
+                      <input class="form-control mb-2" type="' . $value['type'] . '" name="' . $value['name'] . '" >
                     </div>
                   </div>';
             }

@@ -3,8 +3,8 @@
 
     $mainMenuLinks = array(
         array("filename" => "index.php", "name" => "Form"),
-        array("filename" => "about.php", "name" => "About"),
         array("filename" => "result.php", "name" => "Result"),
+        array("filename" => "about.php", "name" => "About"),
     );
 ?>
 
